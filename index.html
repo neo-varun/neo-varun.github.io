@@ -5,10 +5,66 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Varun | AI Portfolio</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <style>
+    .gradient-text {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .floating {
+      animation: floating 3s ease-in-out infinite;
+    }
+    @keyframes floating {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+    }
+    .glow {
+      box-shadow: 0 0 20px rgba(102, 126, 234, 0.3);
+    }
+  </style>
 </head>
-<body class="bg-black text-white font-sans">
+<body class="bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white font-sans">
+
+  <!-- Hero Section -->
+  <section class="min-h-screen flex items-center justify-center relative overflow-hidden">
+    <!-- Background particles effect -->
+    <div class="absolute inset-0 overflow-hidden">
+      <div class="absolute w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse top-20 left-20"></div>
+      <div class="absolute w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse bottom-20 right-20 animation-delay-2000"></div>
+    </div>
+    
+    <div class="max-w-6xl mx-auto px-6 text-center relative z-10">
+      <div class="floating">
+        <h1 class="text-6xl md:text-8xl font-bold mb-6">
+          Hi, I'm <span class="gradient-text">Varun</span>
+        </h1>
+      </div>
+      <p class="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
+        AI & Machine Learning Engineer crafting intelligent solutions that bridge the gap between data and innovation
+      </p>
+      <div class="flex flex-wrap justify-center gap-4 mb-12">
+        <span class="bg-gray-800 px-4 py-2 rounded-full text-sm glow">Machine Learning</span>
+        <span class="bg-gray-800 px-4 py-2 rounded-full text-sm glow">Deep Learning</span>
+        <span class="bg-gray-800 px-4 py-2 rounded-full text-sm glow">Natural Language Processing</span>
+        <span class="bg-gray-800 px-4 py-2 rounded-full text-sm glow">Computer Vision</span>
+      </div>
+      <div class="flex justify-center space-x-6">
+        <a href="#projects" class="bg-gradient-to-r from-purple-600 to-blue-600 px-8 py-3 rounded-lg font-semibold hover:scale-105 transition-transform duration-300">
+          View My Work
+        </a>
+        <a href="#contact" class="border border-gray-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-800 transition-colors duration-300">
+          Get In Touch
+        </a>
+      </div>
+    </div>
+  </section>
 
   <!-- Portfolio Projects -->
+  <section id="projects" class="py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-16 gradient-text">Featured Projects</h2>
 
   <!-- Project 1 -->
   <section class="py-10 px-6 md:px-16">
@@ -117,11 +173,144 @@
       <div class="flex-1">
         <img src="assets/images/voice-agent.png" alt="Voice Agent AI" class="rounded shadow-lg w-full max-w-md mx-auto" />
       </div>
+    </div>  </section>
+
+  <!-- Project 6 -->
+  <section class="py-10 px-6 md:px-16">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10">
+      <div class="flex-1">
+        <h2 class="text-3xl font-semibold mb-4">Stock Price Predictor</h2>
+        <p class="text-gray-300 mb-4">Advanced time series analysis and LSTM neural networks to predict stock market trends and prices.</p>
+        <ul class="list-disc list-inside text-gray-400 mb-4 space-y-1">
+          <li>Python</li>
+          <li>TensorFlow</li>
+          <li>LSTM</li>
+          <li>yfinance</li>
+        </ul>
+        <div class="flex items-center space-x-4">
+          <a href="https://github.com/neo-varun/Stock_Price_Predictor" target="_blank" class="text-red-500 font-medium hover:underline">GitHub →</a>
+        </div>
+      </div>
+      <div class="flex-1">
+        <div class="bg-gradient-to-br from-green-600 to-blue-600 rounded-lg shadow-lg w-full max-w-md mx-auto h-48 flex items-center justify-center">
+          <i class="fas fa-chart-line text-6xl text-white opacity-80"></i>
+        </div>
+      </div>
     </div>
   </section>
 
-  <footer class="text-center text-sm py-6 text-gray-500">
-    © 2025 Varun | AI & ML Portfolio
+  <!-- Project 7 -->
+  <section class="py-10 px-6 md:px-16">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10">
+      <div class="flex-1">
+        <h2 class="text-3xl font-semibold mb-4">Recommendation System</h2>
+        <p class="text-gray-300 mb-4">Collaborative filtering and content-based recommendation engine for movies and products using machine learning.</p>
+        <ul class="list-disc list-inside text-gray-400 mb-4 space-y-1">
+          <li>Python</li>
+          <li>Scikit-learn</li>
+          <li>Surprise</li>
+          <li>Matrix Factorization</li>
+        </ul>
+        <div class="flex items-center space-x-4">
+          <a href="https://github.com/neo-varun/Recommendation_System" target="_blank" class="text-red-500 font-medium hover:underline">GitHub →</a>
+        </div>
+      </div>
+      <div class="flex-1">
+        <div class="bg-gradient-to-br from-purple-600 to-pink-600 rounded-lg shadow-lg w-full max-w-md mx-auto h-48 flex items-center justify-center">
+          <i class="fas fa-star text-6xl text-white opacity-80"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project 8 -->
+  <section class="py-10 px-6 md:px-16">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10">
+      <div class="flex-1">
+        <h2 class="text-3xl font-semibold mb-4">Medical Diagnosis AI</h2>
+        <p class="text-gray-300 mb-4">Computer vision model for medical image analysis and disease detection using convolutional neural networks.</p>
+        <ul class="list-disc list-inside text-gray-400 mb-4 space-y-1">
+          <li>Python</li>
+          <li>TensorFlow</li>
+          <li>Computer Vision</li>
+          <li>Medical Imaging</li>
+        </ul>
+        <div class="flex items-center space-x-4">
+          <a href="https://github.com/neo-varun/Medical_Diagnosis_AI" target="_blank" class="text-red-500 font-medium hover:underline">GitHub →</a>
+        </div>
+      </div>
+      <div class="flex-1">
+        <div class="bg-gradient-to-br from-red-600 to-orange-600 rounded-lg shadow-lg w-full max-w-md mx-auto h-48 flex items-center justify-center">
+          <i class="fas fa-heartbeat text-6xl text-white opacity-80"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 bg-gray-900">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <h2 class="text-4xl font-bold mb-8 gradient-text">Get In Touch</h2>
+      <p class="text-xl text-gray-300 mb-12">
+        Let's collaborate on exciting AI projects or discuss opportunities in machine learning
+      </p>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+        <div class="bg-gray-800 p-6 rounded-lg glow">
+          <i class="fas fa-envelope text-3xl text-blue-500 mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">Email</h3>
+          <a href="mailto:varun.ai.ml@gmail.com" class="text-gray-300 hover:text-white transition-colors">
+            varun.ai.ml@gmail.com
+          </a>
+        </div>
+        
+        <div class="bg-gray-800 p-6 rounded-lg glow">
+          <i class="fab fa-linkedin text-3xl text-blue-500 mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">LinkedIn</h3>
+          <a href="https://linkedin.com/in/varun-ai-ml" target="_blank" class="text-gray-300 hover:text-white transition-colors">
+            linkedin.com/in/varun-ai-ml
+          </a>
+        </div>
+        
+        <div class="bg-gray-800 p-6 rounded-lg glow">
+          <i class="fab fa-github text-3xl text-blue-500 mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">GitHub</h3>
+          <a href="https://github.com/neo-varun" target="_blank" class="text-gray-300 hover:text-white transition-colors">
+            github.com/neo-varun
+          </a>
+        </div>
+      </div>
+      
+      <div class="bg-gray-800 p-8 rounded-lg glow">
+        <h3 class="text-2xl font-semibold mb-6">Send me a message</h3>
+        <form class="space-y-4">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <input type="text" placeholder="Your Name" class="bg-gray-700 text-white px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <input type="email" placeholder="Your Email" class="bg-gray-700 text-white px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+          </div>
+          <input type="text" placeholder="Subject" class="w-full bg-gray-700 text-white px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+          <textarea placeholder="Your Message" rows="5" class="w-full bg-gray-700 text-white px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+          <button type="submit" class="bg-gradient-to-r from-purple-600 to-blue-600 px-8 py-3 rounded-lg font-semibold hover:scale-105 transition-transform duration-300">
+            Send Message
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="text-center text-sm py-6 text-gray-500 border-t border-gray-800">
+    <p>© 2025 Varun | AI & ML Portfolio - Crafted with passion for intelligent solutions</p>
+    <div class="flex justify-center space-x-4 mt-4">
+      <a href="https://github.com/neo-varun" target="_blank" class="text-gray-500 hover:text-white transition-colors">
+        <i class="fab fa-github text-xl"></i>
+      </a>
+      <a href="https://linkedin.com/in/varun-ai-ml" target="_blank" class="text-gray-500 hover:text-white transition-colors">
+        <i class="fab fa-linkedin text-xl"></i>
+      </a>
+      <a href="mailto:varun.ai.ml@gmail.com" class="text-gray-500 hover:text-white transition-colors">
+        <i class="fas fa-envelope text-xl"></i>
+      </a>
+    </div>
   </footer>
 </body>
 </html>
